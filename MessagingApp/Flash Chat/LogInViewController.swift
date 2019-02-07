@@ -1,0 +1,45 @@
+//
+//  LogInViewController.swift
+//  Flash Chat
+//
+//  This is the view controller where users login
+
+
+import UIKit
+import Firebase
+import GoogleSignIn
+
+
+class LogInViewController: UIViewController, GIDSignInUIDelegate {
+
+    //Textfields pre-linked with IBOutlets
+    @IBOutlet var emailTextfield: UITextField!
+    @IBOutlet var passwordTextfield: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
+        // TODO(developer) Configure the sign-in button look/feel
+        // ...
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+   
+    @IBAction func logInPressed(_ sender: AnyObject) {
+
+        
+        //TODO: Log in the user
+        
+        
+    }
+    
+
+
+    
+}  
