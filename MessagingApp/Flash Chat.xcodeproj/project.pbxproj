@@ -19,8 +19,6 @@
 		63E28B331B9A337600FBF6E0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */; };
 		63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */; };
 		DC34E0282206339C00C39988 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC34E0272206339C00C39988 /* GoogleService-Info.plist */; };
-		DC34E02A220902C500C39988 /* StackViewUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC34E029220902C500C39988 /* StackViewUser.xib */; };
-		DC34E02C2209041700C39988 /* StackViewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC34E02B2209041700C39988 /* StackViewUser.swift */; };
 		F12B17B849A4594C10BC67BC /* Pods_Flash_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65961CF262D2C3D4530A1173 /* Pods_Flash_Chat.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +39,6 @@
 		63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65961CF262D2C3D4530A1173 /* Pods_Flash_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC34E0272206339C00C39988 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DC34E029220902C500C39988 /* StackViewUser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackViewUser.xib; sourceTree = "<group>"; };
-		DC34E02B2209041700C39988 /* StackViewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewUser.swift; sourceTree = "<group>"; };
 		ED24766732CC29CDA9E644ED /* Pods-Flash Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flash Chat/Pods-Flash Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +109,6 @@
 				63E28B2B1B9A337600FBF6E0 /* ChatViewController.swift */,
 				63E28B2C1B9A337600FBF6E0 /* LogInViewController.swift */,
 				63E28B2D1B9A337600FBF6E0 /* RegisterViewController.swift */,
-				DC34E029220902C500C39988 /* StackViewUser.xib */,
-				DC34E02B2209041700C39988 /* StackViewUser.swift */,
 				63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */,
 			);
 			name = Controller;
@@ -223,7 +217,6 @@
 				6321A9C31B94EBA10053D2E7 /* Images.xcassets in Resources */,
 				DC34E0282206339C00C39988 /* GoogleService-Info.plist in Resources */,
 				63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */,
-				DC34E02A220902C500C39988 /* StackViewUser.xib in Resources */,
 				6321A9E51B94EBE70053D2E7 /* MessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +303,6 @@
 				63E28B321B9A337600FBF6E0 /* RegisterViewController.swift in Sources */,
 				63E28B311B9A337600FBF6E0 /* LogInViewController.swift in Sources */,
 				63E28B2F1B9A337600FBF6E0 /* AppDelegate.swift in Sources */,
-				DC34E02C2209041700C39988 /* StackViewUser.swift in Sources */,
 				63E28B301B9A337600FBF6E0 /* ChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -52,7 +52,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-sR-rfK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="722"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-Qr-xbg" userLabel="Google Sign In" customClass="GIDSignInButton">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-Qr-xbg" userLabel="Google Sign In" customClass="GIDSignInButton">
                                 <rect key="frame" x="127.66666666666669" y="338.66666666666669" width="120" height="45"/>
                                 <color key="backgroundColor" red="0.31610957871505385" green="0.81415483922909559" blue="0.89849698604060912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -117,7 +117,7 @@
                                             <constraint firstAttribute="height" constant="30" id="t4i-pt-0WT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67C-Ey-AV3">
                                         <rect key="frame" x="16" y="165" width="343" height="30"/>
@@ -366,6 +366,6 @@
         <image name="background1" width="1200" height="795"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rRW-Qd-PQi"/>
+        <segue reference="mOy-cb-hAN"/>
     </inferredMetricsTieBreakers>
 </document>
