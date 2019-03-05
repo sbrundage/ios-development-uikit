@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import SVProgressHUD
 
 
 class LogInViewController: UIViewController, GIDSignInUIDelegate {
@@ -32,6 +33,8 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate {
 
    
     @IBAction func logInPressed(_ sender: AnyObject) {
+        
+        SVProgressHUD.show()
 
         //TODO: Log in the user
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
@@ -41,6 +44,8 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate {
                 print(error)
             } else {
                 print("Login was successful")
+                
+                SVProgressHUD.dismiss()
                 
                 self.performSegue(withIdentifier: "goToChat", sender: self)
             }
