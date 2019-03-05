@@ -41,7 +41,29 @@ class ToDoListViewController: UITableViewController {
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
+    
+    //MARK - Add new items
+    @IBAction func addButtonPressed(_ sender: Any) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New To-Do Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            //Once user clicks "Add Item" on alert
+            print("Successfully add new item to to-do")
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Enter new To Do"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
