@@ -87,15 +87,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //TODO: Declare textFieldDidBeginEditing here:
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.50) {
-            self.heightConstraint.constant = 350
+        UIView.animate(withDuration: 0.30) {
+            self.heightConstraint.constant = 300
             self.view.layoutIfNeeded()
         }
     }
     
     //TODO: Declare textFieldDidEndEditing here:
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.50) {
+        UIView.animate(withDuration: 0.30) {
             self.heightConstraint.constant = 50
             self.view.layoutIfNeeded()
         }
@@ -147,9 +147,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let text = snapshotValue["MessageBody"]!
             let sender = snapshotValue["Sender"]!
-            
-            print(text, sender)
-            
+                        
             //Create message object from saved information from Firebase
         }
     }
