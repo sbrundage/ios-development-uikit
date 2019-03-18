@@ -10,16 +10,28 @@ import UIKit
 
 class ToDoListViewController: UITableViewController {
     
-    var itemArray = ["Study", "Workout", "Sleep more"]
+    var itemArray = [Item]()
     
     let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let items = defaults.array(forKey: "ToDoListArray") as? [String] {
-            itemArray = items
-        }
+        let newItem1 = Item()
+        newItem1.title = "Workout"
+        itemArray.append(newItem1)
+        
+        let newItem2 = Item()
+        newItem2.title = "Classwork"
+        itemArray.append(newItem2)
+        
+        let newItem3 = Item()
+        newItem3.title = "Meditate"
+        itemArray.append(newItem3)
+        
+//        if let items = defaults.array(forKey: "ToDoListArray") as? [String] {
+//            itemArray = items
+//        }
     }
     
     //MARK - Tableview Datasource Methods
@@ -31,7 +43,7 @@ class ToDoListViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
         
-        cell.textLabel?.text = itemArray[indexPath.row]
+        cell.textLabel?.text = itemArray[indexPath.row].title
         
         return cell
     }
@@ -58,13 +70,13 @@ class ToDoListViewController: UITableViewController {
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             //Once user clicks "Add Item" on alert
             
-            if textField.text != "" {
-                self.itemArray.append(textField.text!)
-                
-                self.defaults.set(self.itemArray, forKey: "ToDoListArray")
-                
-                self.tableView.reloadData()
-            }
+            let newItem = Item()
+            newItem.title = textField.text!
+            self.itemArray.append(newItem)
+            
+            self.defaults.set(self.itemArray, forKey: "ToDoListArray")
+            
+            self.tableView.reloadData()
         }
         
         alert.addTextField { (alertTextField) in
