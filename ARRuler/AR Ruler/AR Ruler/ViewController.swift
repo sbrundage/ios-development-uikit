@@ -14,6 +14,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     var dotNodeArray = [SCNNode]()
+    var textGeo: SCNText?
+    var textNode: SCNNode?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        //Reset touches if there are more than 2
+        if dotNodeArray.count >= 2 {
+            removeDots()
+        }
+        
         if let touchLocation = touches.first?.location(in: sceneView) {
             let hitTestResults = sceneView.hitTest(touchLocation, types: .featurePoint)
             
@@ -49,6 +57,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 addDot(at: hitResult)
             }
         }
+    }
+    
+    @IBAction func resetPoints(_ sender: UIBarButtonItem) {
+        removeDots()
+    }
+    
+    
+    func removeDots() {
+        for dotNode in dotNodeArray {
+            dotNode.removeFromParentNode()
+            dotNodeArray = [SCNNode]()
+        }
+        textNode?.removeFromParentNode()
     }
     
     func addDot(at hitResult : ARHitTestResult) {
@@ -88,15 +109,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func updateText(text: String, atPosition position: SCNVector3) {
         
-        let textGeo = SCNText(string: text, extrusionDepth: 1.0)
+        textGeo = SCNText(string: text, extrusionDepth: 1.0)
         
-        textGeo.firstMaterial?.diffuse.contents = UIColor.blue
+        textGeo?.firstMaterial?.diffuse.contents = UIColor.blue
         
-        let textNode = SCNNode(geometry: textGeo)
-        textNode.position = SCNVector3(position.x, position.y + 0.01, position.z)
-        textNode.scale = SCNVector3(0.005, 0.005, 0.005)
+        textNode = SCNNode(geometry: textGeo)
+        textNode?.position = SCNVector3(position.x, position.y + 0.01, position.z)
+        textNode?.scale = SCNVector3(0.005, 0.005, 0.005)
         
-        sceneView.scene.rootNode.addChildNode(textNode)
+        sceneView.scene.rootNode.addChildNode(textNode!)
     }
 
     // MARK: - ARSCNViewDelegate
