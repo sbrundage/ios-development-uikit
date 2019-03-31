@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC028BD122405151006F63E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC028BD022405151006F63E1 /* AppDelegate.swift */; };
-		DC028BD322405151006F63E1 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DC028BD222405151006F63E1 /* art.scnassets */; };
-		DC028BD522405151006F63E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC028BD422405151006F63E1 /* ViewController.swift */; };
-		DC028BD822405151006F63E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC028BD622405151006F63E1 /* Main.storyboard */; };
-		DC028BDA22405153006F63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC028BD922405153006F63E1 /* Assets.xcassets */; };
-		DC028BDD22405153006F63E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC028BDB22405153006F63E1 /* LaunchScreen.storyboard */; };
-		DC028C4222421326006F63E1 /* SCNNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC028C4122421326006F63E1 /* SCNNodeExtension.swift */; };
+		DCC7ADB922513E1C00D0E779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7ADB822513E1C00D0E779 /* AppDelegate.swift */; };
+		DCC7ADBB22513E1C00D0E779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7ADBA22513E1C00D0E779 /* ViewController.swift */; };
+		DCC7ADBE22513E1C00D0E779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC7ADBC22513E1C00D0E779 /* Main.storyboard */; };
+		DCC7ADC022513E1D00D0E779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC7ADBF22513E1D00D0E779 /* Assets.xcassets */; };
+		DCC7ADC322513E1D00D0E779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC7ADC122513E1D00D0E779 /* LaunchScreen.storyboard */; };
+		DCC7ADCB22513FA700D0E779 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7ADCA22513FA700D0E779 /* BuildingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC028BCD22405151006F63E1 /* AR Ruler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Ruler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC028BD022405151006F63E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC028BD222405151006F63E1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		DC028BD422405151006F63E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC028BD722405151006F63E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC028BD922405153006F63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DC028BDC22405153006F63E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DC028BDE22405153006F63E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC028C4122421326006F63E1 /* SCNNodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNodeExtension.swift; sourceTree = "<group>"; };
+		DCC7ADB522513E1C00D0E779 /* CoreLocationARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLocationARKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC7ADB822513E1C00D0E779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCC7ADBA22513E1C00D0E779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCC7ADBD22513E1C00D0E779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCC7ADBF22513E1D00D0E779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCC7ADC222513E1D00D0E779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCC7ADC422513E1D00D0E779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC7ADCA22513FA700D0E779 /* BuildingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DC028BCA22405151006F63E1 /* Frameworks */ = {
+		DCC7ADB222513E1C00D0E779 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +37,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DC028BC422405151006F63E1 = {
+		DCC7ADAC22513E1C00D0E779 = {
 			isa = PBXGroup;
 			children = (
-				DC028BCF22405151006F63E1 /* AR Ruler */,
-				DC028BCE22405151006F63E1 /* Products */,
+				DCC7ADB722513E1C00D0E779 /* CoreLocationARKit */,
+				DCC7ADB622513E1C00D0E779 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DC028BCE22405151006F63E1 /* Products */ = {
+		DCC7ADB622513E1C00D0E779 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC028BCD22405151006F63E1 /* AR Ruler.app */,
+				DCC7ADB522513E1C00D0E779 /* CoreLocationARKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC028BCF22405151006F63E1 /* AR Ruler */ = {
+		DCC7ADB722513E1C00D0E779 /* CoreLocationARKit */ = {
 			isa = PBXGroup;
 			children = (
-				DC028BD022405151006F63E1 /* AppDelegate.swift */,
-				DC028BD422405151006F63E1 /* ViewController.swift */,
-				DC028C4122421326006F63E1 /* SCNNodeExtension.swift */,
-				DC028BD622405151006F63E1 /* Main.storyboard */,
-				DC028BD222405151006F63E1 /* art.scnassets */,
-				DC028BD922405153006F63E1 /* Assets.xcassets */,
-				DC028BDB22405153006F63E1 /* LaunchScreen.storyboard */,
-				DC028BDE22405153006F63E1 /* Info.plist */,
+				DCC7ADB822513E1C00D0E779 /* AppDelegate.swift */,
+				DCC7ADCC2251400C00D0E779 /* Controllers */,
+				DCC7ADBC22513E1C00D0E779 /* Main.storyboard */,
+				DCC7ADC122513E1D00D0E779 /* LaunchScreen.storyboard */,
+				DCC7ADBF22513E1D00D0E779 /* Assets.xcassets */,
+				DCC7ADC422513E1D00D0E779 /* Info.plist */,
 			);
-			path = "AR Ruler";
+			path = CoreLocationARKit;
+			sourceTree = "<group>";
+		};
+		DCC7ADCC2251400C00D0E779 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCC7ADBA22513E1C00D0E779 /* ViewController.swift */,
+				DCC7ADCA22513FA700D0E779 /* BuildingsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC028BCC22405151006F63E1 /* AR Ruler */ = {
+		DCC7ADB422513E1C00D0E779 /* CoreLocationARKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC028BE122405153006F63E1 /* Build configuration list for PBXNativeTarget "AR Ruler" */;
+			buildConfigurationList = DCC7ADC722513E1D00D0E779 /* Build configuration list for PBXNativeTarget "CoreLocationARKit" */;
 			buildPhases = (
-				DC028BC922405151006F63E1 /* Sources */,
-				DC028BCA22405151006F63E1 /* Frameworks */,
-				DC028BCB22405151006F63E1 /* Resources */,
+				DCC7ADB122513E1C00D0E779 /* Sources */,
+				DCC7ADB222513E1C00D0E779 /* Frameworks */,
+				DCC7ADB322513E1C00D0E779 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "AR Ruler";
-			productName = "AR Ruler";
-			productReference = DC028BCD22405151006F63E1 /* AR Ruler.app */;
+			name = CoreLocationARKit;
+			productName = CoreLocationARKit;
+			productReference = DCC7ADB522513E1C00D0E779 /* CoreLocationARKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DC028BC522405151006F63E1 /* Project object */ = {
+		DCC7ADAD22513E1C00D0E779 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Brundage;
 				TargetAttributes = {
-					DC028BCC22405151006F63E1 = {
+					DCC7ADB422513E1C00D0E779 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = DC028BC822405151006F63E1 /* Build configuration list for PBXProject "AR Ruler" */;
+			buildConfigurationList = DCC7ADB022513E1C00D0E779 /* Build configuration list for PBXProject "CoreLocationARKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +118,55 @@
 				en,
 				Base,
 			);
-			mainGroup = DC028BC422405151006F63E1;
-			productRefGroup = DC028BCE22405151006F63E1 /* Products */;
+			mainGroup = DCC7ADAC22513E1C00D0E779;
+			productRefGroup = DCC7ADB622513E1C00D0E779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC028BCC22405151006F63E1 /* AR Ruler */,
+				DCC7ADB422513E1C00D0E779 /* CoreLocationARKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DC028BCB22405151006F63E1 /* Resources */ = {
+		DCC7ADB322513E1C00D0E779 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC028BD322405151006F63E1 /* art.scnassets in Resources */,
-				DC028BDD22405153006F63E1 /* LaunchScreen.storyboard in Resources */,
-				DC028BDA22405153006F63E1 /* Assets.xcassets in Resources */,
-				DC028BD822405151006F63E1 /* Main.storyboard in Resources */,
+				DCC7ADC322513E1D00D0E779 /* LaunchScreen.storyboard in Resources */,
+				DCC7ADC022513E1D00D0E779 /* Assets.xcassets in Resources */,
+				DCC7ADBE22513E1C00D0E779 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DC028BC922405151006F63E1 /* Sources */ = {
+		DCC7ADB122513E1C00D0E779 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC028BD522405151006F63E1 /* ViewController.swift in Sources */,
-				DC028C4222421326006F63E1 /* SCNNodeExtension.swift in Sources */,
-				DC028BD122405151006F63E1 /* AppDelegate.swift in Sources */,
+				DCC7ADBB22513E1C00D0E779 /* ViewController.swift in Sources */,
+				DCC7ADB922513E1C00D0E779 /* AppDelegate.swift in Sources */,
+				DCC7ADCB22513FA700D0E779 /* BuildingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DC028BD622405151006F63E1 /* Main.storyboard */ = {
+		DCC7ADBC22513E1C00D0E779 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DC028BD722405151006F63E1 /* Base */,
+				DCC7ADBD22513E1C00D0E779 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DC028BDB22405153006F63E1 /* LaunchScreen.storyboard */ = {
+		DCC7ADC122513E1D00D0E779 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DC028BDC22405153006F63E1 /* Base */,
+				DCC7ADC222513E1D00D0E779 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DC028BDF22405153006F63E1 /* Debug */ = {
+		DCC7ADC522513E1D00D0E779 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		DC028BE022405153006F63E1 /* Release */ = {
+		DCC7ADC622513E1D00D0E779 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,36 +290,36 @@
 			};
 			name = Release;
 		};
-		DC028BE222405153006F63E1 /* Debug */ = {
+		DCC7ADC822513E1D00D0E779 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L4AL296TC9;
-				INFOPLIST_FILE = "AR Ruler/Info.plist";
+				DEVELOPMENT_TEAM = J7U54B96T9;
+				INFOPLIST_FILE = CoreLocationARKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.BrundageCo.AR-Ruler";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BrundageCo.CoreLocationARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DC028BE322405153006F63E1 /* Release */ = {
+		DCC7ADC922513E1D00D0E779 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L4AL296TC9;
-				INFOPLIST_FILE = "AR Ruler/Info.plist";
+				DEVELOPMENT_TEAM = J7U54B96T9;
+				INFOPLIST_FILE = CoreLocationARKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.BrundageCo.AR-Ruler";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BrundageCo.CoreLocationARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,25 +329,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC028BC822405151006F63E1 /* Build configuration list for PBXProject "AR Ruler" */ = {
+		DCC7ADB022513E1C00D0E779 /* Build configuration list for PBXProject "CoreLocationARKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC028BDF22405153006F63E1 /* Debug */,
-				DC028BE022405153006F63E1 /* Release */,
+				DCC7ADC522513E1D00D0E779 /* Debug */,
+				DCC7ADC622513E1D00D0E779 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC028BE122405153006F63E1 /* Build configuration list for PBXNativeTarget "AR Ruler" */ = {
+		DCC7ADC722513E1D00D0E779 /* Build configuration list for PBXNativeTarget "CoreLocationARKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC028BE222405153006F63E1 /* Debug */,
-				DC028BE322405153006F63E1 /* Release */,
+				DCC7ADC822513E1D00D0E779 /* Debug */,
+				DCC7ADC922513E1D00D0E779 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DC028BC522405151006F63E1 /* Project object */;
+	rootObject = DCC7ADAD22513E1C00D0E779 /* Project object */;
 }

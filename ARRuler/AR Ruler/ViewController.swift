@@ -16,6 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var dotNodeArray = [SCNNode]()
     var textGeo: SCNText?
     var textNode: SCNNode?
+    var lineNode: SCNNode?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         removeDots()
     }
     
-    
     func removeDots() {
         for dotNode in dotNodeArray {
             dotNode.removeFromParentNode()
@@ -90,6 +90,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         if dotNodeArray.count >= 2 {
             calculate()
+            connectDots()
         }
     }
     
@@ -105,6 +106,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let distance = abs(sqrt(pow(a, 2) + pow(b, 2) + pow(c, 2)))
         
         updateText(text: "\(distance)", atPosition: end.position)
+    }
+    
+    func connectDots() {
+//        let lineGeometry = SCNGeometry.line(from: dotNodeArray[0].position, to: dotNodeArray[1].position)
+//        lineNode = SCNNode(geometry: lineGeometry)
+//        lineNode?.position = SCNVector3Zero
+        
+        sceneView.scene.rootNode.addChildNode((lineNode?.buildLineInTwoPointsWithRotation(
+            from: dotNodeArray[0].position, to: dotNodeArray[1].position, radius: 0.0025, color: .blue))!)        
     }
     
     func updateText(text: String, atPosition position: SCNVector3) {
@@ -130,4 +140,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return node
     }
 */
+}
+
+extension SCNGeometry {
+    class func line(from vector1: SCNVector3, to vector2: SCNVector3) -> SCNGeometry {
+        let indices: [Int32] = [0, 1]
+        let source = SCNGeometrySource(vertices: [vector1, vector2])
+        let element = SCNGeometryElement(indices: indices, primitiveType: .line)
+        return SCNGeometry(sources: [source], elements: [element])
+    }
 }
