@@ -11,7 +11,7 @@ import UIKit
 
 class BuildingsViewController : UITableViewController {
     
-    private let destinations = ["All Buildings", "Professors", "Food", "Study"]
+    private let destinations = ["UCF", "Coffee", "Bars", "Fast Food", "Banks", "Hospitals", "Gas"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
