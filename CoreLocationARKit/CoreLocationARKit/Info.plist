@@ -47,5 +47,7 @@
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is needed for AR experiences</string>
 </dict>
 </plist>

@@ -9,15 +9,21 @@
 import UIKit
 import CoreLocation
 import MapKit
+import ARCL
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var place: String!
     
+    var sceneLocationView = SceneLocationView()
+    
     lazy private var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sceneLocationView.run()
+        self.view.addSubview(sceneLocationView)
         
         self.title = self.place
         
@@ -27,6 +33,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.startUpdatingLocation()
         
         findLocalPlaces()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sceneLocationView.frame = self.view.bounds
     }
 
 
@@ -50,8 +61,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             guard let response = response else { return }
             
             for item in response.mapItems {
-                print(item.placemark)
+                
                 let placeLocation = item.placemark.location
+                let image = UIImage(named: "map-pin")!
+                let annotationNode = LocationAnnotationNode(location: placeLocation, image: image)
+                
+                annotationNode.scaleRelativeToDistance = true
+                DispatchQueue.main.async {
+                    self.sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+                }
             }
         }
     }

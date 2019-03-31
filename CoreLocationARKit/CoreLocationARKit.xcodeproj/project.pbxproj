@@ -48,7 +48,6 @@
 				0BBC7AF4E96C9843C74A6E9A /* Pods-CoreLocationARKit.debug.xcconfig */,
 				8B6A2E124EF718DC9ABBAA89 /* Pods-CoreLocationARKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
