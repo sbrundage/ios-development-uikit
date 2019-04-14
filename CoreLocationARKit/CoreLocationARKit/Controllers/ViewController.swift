@@ -63,12 +63,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             for item in response.mapItems {
                 
                 let placeLocation = item.placemark.location
-                let image = UIImage(named: "map-pin")!
-                let annotationNode = LocationAnnotationNode(location: placeLocation, image: image)
+//                let image = UIImage(named: "map-pin")!
                 
-                annotationNode.scaleRelativeToDistance = true
+                let placeAnnotationNode = PlaceAnnotation(location: placeLocation, title: item.placemark.name!)
+                
+//                let annotationNode = LocationAnnotationNode(location: placeLocation, image: image)
+                
                 DispatchQueue.main.async {
-                    self.sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+                    self.sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: placeAnnotationNode)
                 }
             }
         }

@@ -14,6 +14,9 @@
 		DCC7ADC022513E1D00D0E779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC7ADBF22513E1D00D0E779 /* Assets.xcassets */; };
 		DCC7ADC322513E1D00D0E779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC7ADC122513E1D00D0E779 /* LaunchScreen.storyboard */; };
 		DCC7ADCB22513FA700D0E779 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7ADCA22513FA700D0E779 /* BuildingsViewController.swift */; };
+		DCC7ADD022515DCE00D0E779 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7ADCF22515DCE00D0E779 /* PlaceAnnotation.swift */; };
+		DCC7ADD82251A6EC00D0E779 /* UCFNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7ADD72251A6EC00D0E779 /* UCFNavViewController.swift */; };
+		DCC7ADDA2251B02B00D0E779 /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC7ADD92251B02B00D0E779 /* map-pin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		DCC7ADC222513E1D00D0E779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCC7ADC422513E1D00D0E779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC7ADCA22513FA700D0E779 /* BuildingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsViewController.swift; sourceTree = "<group>"; };
+		DCC7ADCF22515DCE00D0E779 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		DCC7ADD72251A6EC00D0E779 /* UCFNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCFNavViewController.swift; sourceTree = "<group>"; };
+		DCC7ADD92251B02B00D0E779 /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-pin.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				DCC7ADB822513E1C00D0E779 /* AppDelegate.swift */,
+				DCC7ADCF22515DCE00D0E779 /* PlaceAnnotation.swift */,
+				DCC7ADD92251B02B00D0E779 /* map-pin.png */,
 				DCC7ADCC2251400C00D0E779 /* Controllers */,
 				DCC7ADBC22513E1C00D0E779 /* Main.storyboard */,
 				DCC7ADC122513E1D00D0E779 /* LaunchScreen.storyboard */,
@@ -86,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC7ADBA22513E1C00D0E779 /* ViewController.swift */,
+				DCC7ADD72251A6EC00D0E779 /* UCFNavViewController.swift */,
 				DCC7ADCA22513FA700D0E779 /* BuildingsViewController.swift */,
 			);
 			path = Controllers;
@@ -159,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC7ADDA2251B02B00D0E779 /* map-pin.png in Resources */,
 				DCC7ADC322513E1D00D0E779 /* LaunchScreen.storyboard in Resources */,
 				DCC7ADC022513E1D00D0E779 /* Assets.xcassets in Resources */,
 				DCC7ADBE22513E1C00D0E779 /* Main.storyboard in Resources */,
@@ -219,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC7ADD82251A6EC00D0E779 /* UCFNavViewController.swift in Sources */,
+				DCC7ADD022515DCE00D0E779 /* PlaceAnnotation.swift in Sources */,
 				DCC7ADBB22513E1C00D0E779 /* ViewController.swift in Sources */,
 				DCC7ADB922513E1C00D0E779 /* AppDelegate.swift in Sources */,
 				DCC7ADCB22513FA700D0E779 /* BuildingsViewController.swift in Sources */,
