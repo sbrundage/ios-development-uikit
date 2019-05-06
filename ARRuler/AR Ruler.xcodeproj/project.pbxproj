@@ -13,6 +13,7 @@
 		DC028BD822405151006F63E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC028BD622405151006F63E1 /* Main.storyboard */; };
 		DC028BDA22405153006F63E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC028BD922405153006F63E1 /* Assets.xcassets */; };
 		DC028BDD22405153006F63E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC028BDB22405153006F63E1 /* LaunchScreen.storyboard */; };
+		DC028C4222421326006F63E1 /* SCNNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC028C4122421326006F63E1 /* SCNNodeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DC028BD922405153006F63E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC028BDC22405153006F63E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC028BDE22405153006F63E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC028C4122421326006F63E1 /* SCNNodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNodeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				DC028BD022405151006F63E1 /* AppDelegate.swift */,
-				DC028BD222405151006F63E1 /* art.scnassets */,
 				DC028BD422405151006F63E1 /* ViewController.swift */,
+				DC028C4122421326006F63E1 /* SCNNodeExtension.swift */,
 				DC028BD622405151006F63E1 /* Main.storyboard */,
+				DC028BD222405151006F63E1 /* art.scnassets */,
 				DC028BD922405153006F63E1 /* Assets.xcassets */,
 				DC028BDB22405153006F63E1 /* LaunchScreen.storyboard */,
 				DC028BDE22405153006F63E1 /* Info.plist */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC028BD522405151006F63E1 /* ViewController.swift in Sources */,
+				DC028C4222421326006F63E1 /* SCNNodeExtension.swift in Sources */,
 				DC028BD122405151006F63E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
