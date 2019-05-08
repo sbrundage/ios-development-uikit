@@ -58,12 +58,35 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 width: imageAnchor.referenceImage.physicalSize.width,
                 height: imageAnchor.referenceImage.physicalSize.height)
             
-            imagePlane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.5)
+            imagePlane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.2)
             
             let planeNode = SCNNode(geometry: imagePlane)
             planeNode.eulerAngles.x = -.pi/2
             
             node.addChildNode(planeNode)
+            
+            if let pokeScene = SCNScene(named: "art.scnassets/gangar.scn") {
+                
+                //Create out 3D object node that we will augment
+                let pokeNode = pokeScene.rootNode.childNodes.first
+                pokeNode?.scale = SCNVector3(0.01, 0.01, 0.01)
+                
+                //Add materials to 3D object
+                let material1 = SCNMaterial()
+                material1.diffuse.contents = UIImage(named: "art.scnassets/gangar_0_0.tga")
+                
+                let material2 = SCNMaterial()
+                material2.diffuse.contents = UIImage(named: "art.scnassets/gangar_0_1.tga")
+
+//                let material3 = SCNMaterial()
+//                material3.diffuse.contents = UIImage(named: "art.scnassets/GangarEyeDh.tga")
+                
+                pokeNode?.geometry?.materials = [material1, material2]
+                
+                pokeNode?.eulerAngles.x = .pi
+                
+                planeNode.addChildNode(pokeNode!)
+            }
         }
         
         return node
