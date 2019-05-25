@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6216F9B32299B3D700D8C0BD /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6216F9B22299B3D700D8C0BD /* OverlayPlane.swift */; };
+		6216F9B52299C6EC00D8C0BD /* overlay_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216F9B42299C6EC00D8C0BD /* overlay_grid.png */; };
 		DC321AEB224DC2C90078BA26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC321AEA224DC2C90078BA26 /* AppDelegate.swift */; };
 		DC321AED224DC2C90078BA26 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = DC321AEC224DC2C90078BA26 /* art.scnassets */; };
 		DC321AEF224DC2C90078BA26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC321AEE224DC2C90078BA26 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6216F9B22299B3D700D8C0BD /* OverlayPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
+		6216F9B42299C6EC00D8C0BD /* overlay_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay_grid.png; path = ../../../../../../Downloads/Assets/overlay_grid.png; sourceTree = "<group>"; };
 		DC321AE7224DC2C90078BA26 /* ARPlanes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPlanes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC321AEA224DC2C90078BA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC321AEC224DC2C90078BA26 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -57,9 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				DC321AEA224DC2C90078BA26 /* AppDelegate.swift */,
-				DC321AEC224DC2C90078BA26 /* art.scnassets */,
 				DC321AEE224DC2C90078BA26 /* ViewController.swift */,
+				6216F9B22299B3D700D8C0BD /* OverlayPlane.swift */,
 				DC321AF0224DC2C90078BA26 /* Main.storyboard */,
+				6216F9B42299C6EC00D8C0BD /* overlay_grid.png */,
+				DC321AEC224DC2C90078BA26 /* art.scnassets */,
 				DC321AF3224DC2CB0078BA26 /* Assets.xcassets */,
 				DC321AF5224DC2CB0078BA26 /* LaunchScreen.storyboard */,
 				DC321AF8224DC2CB0078BA26 /* Info.plist */,
@@ -95,7 +101,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Brundage;
+				ORGANIZATIONNAME = rbc;
 				TargetAttributes = {
 					DC321AE6224DC2C90078BA26 = {
 						CreatedOnToolsVersion = 10.1;
@@ -103,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = DC321AE2224DC2C90078BA26 /* Build configuration list for PBXProject "ARPlanes" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC321AED224DC2C90078BA26 /* art.scnassets in Resources */,
+				6216F9B52299C6EC00D8C0BD /* overlay_grid.png in Resources */,
 				DC321AF7224DC2CB0078BA26 /* LaunchScreen.storyboard in Resources */,
 				DC321AF4224DC2CB0078BA26 /* Assets.xcassets in Resources */,
 				DC321AF2224DC2C90078BA26 /* Main.storyboard in Resources */,
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC321AEF224DC2C90078BA26 /* ViewController.swift in Sources */,
+				6216F9B32299B3D700D8C0BD /* OverlayPlane.swift in Sources */,
 				DC321AEB224DC2C90078BA26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,13 +295,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J7U54B96T9;
+				DEVELOPMENT_TEAM = KXS98JE224;
 				INFOPLIST_FILE = ARPlanes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BrundageCo.ARPlanes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SteveBrundage.ARPlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,13 +313,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J7U54B96T9;
+				DEVELOPMENT_TEAM = KXS98JE224;
 				INFOPLIST_FILE = ARPlanes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BrundageCo.ARPlanes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SteveBrundage.ARPlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
