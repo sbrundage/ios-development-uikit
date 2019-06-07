@@ -29,6 +29,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a new scene
         let scene = SCNScene()
         
+        //Add Touch Recogniser
+        
+        
         // Set the scene to the view
         sceneView.scene = scene
     }
@@ -51,6 +54,43 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+    }
+    
+    // MARK: - Tap Gesture Recognizer
+    private func registerTapRecognizer() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        self.sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    //Handle taps
+    @objc private func tapped(recognizer: UIGestureRecognizer) {
+        
+        let sceneView = recognizer.view as! ARSCNView
+        let touchLocation = recognizer.location(in: sceneView)
+        
+        let hitTestResult = sceneView.hitTest(touchLocation, types: .existingPlaneUsingExtent)
+        
+        if !hitTestResult.isEmpty {
+            guard let hitResult = hitTestResult.first else { return }
+            addBox(hitResult: hitResult)
+        }
+    }
+    
+    private func addBox(hitResult : ARHitTestResult) {
+        
+        let boxGeo = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0)
+        let material = SCNMaterial()
+        
+        material.diffuse.contents = UIColor.cyan
+        boxGeo.materials = [material]
+        
+        let boxNode = SCNNode(geometry: boxGeo)
+        
+        //Set box position to position of intersection of detected plane and touch location
+        let hitLocation = hitResult.worldTransform.columns.3
+        boxNode.position = SCNVector3(hitLocation.x, hitLocation.y, hitLocation.z)
+        
+        self.sceneView.scene.rootNode.addChildNode(boxNode)
     }
 
     // MARK: - ARSCNViewDelegate
