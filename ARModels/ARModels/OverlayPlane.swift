@@ -34,7 +34,7 @@ class OverlayPlane: SCNNode {
         self.planeGeometry = SCNPlane(width: CGFloat(self.anchor.extent.x), height: CGFloat(self.anchor.extent.z))
         
         let material = SCNMaterial()
-        material.diffuse.contents = UIColor.blue
+        material.diffuse.contents = UIColor.blue.withAlphaComponent(0.5)
         
         self.planeGeometry.materials = [material]
         

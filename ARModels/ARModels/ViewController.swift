@@ -13,6 +13,7 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    var planesArray = [OverlayPlane]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if anchor is ARPlaneAnchor {
             let plane = OverlayPlane(anchor: anchor as! ARPlaneAnchor)
+            self.planesArray.append(plane)
             node.addChildNode(plane)
         } else { return }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        let plane = self.planesArray.filter { plane in
+            return plane.anchor.identifier == anchor.identifier
+        }.first
+
+        if plane == nil { return }
+
+        plane?.update(anchor: anchor as! ARPlaneAnchor)
     }
 }
