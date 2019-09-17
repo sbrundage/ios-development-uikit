@@ -48,19 +48,25 @@ class UCFNavViewController: UIViewController, CLLocationManagerDelegate {
         let planeNode = SCNNode(geometry: plane)
         //continue to add plane above node instead of giant png
         
-        let engILocation = CLLocation(latitude: 28.6014342, longitude: -81.2009329)
-        let engILocNode = LocationAnnotationNode(location: engILocation, image: image!)
-        engILocNode.tag = "Engineering I"
-        engILocNode.scale = SCNVector3(50,50,50)
+//        let engILocation = CLLocation(latitude: 28.6014342, longitude: -81.2009329)
+//        let engILocNode = LocationAnnotationNode(location: engILocation, image: image!)
+//        engILocNode.tag = "Engineering I"
+//        engILocNode.scale = SCNVector3(50,50,50)
 //        engILocNode.scaleRelativeToDistance = true
         
-        let cbIILocation = CLLocation(latitude: 28.604309, longitude: -81.20162)
+        let cbIILocation = CLLocation(latitude: 28.6043058, longitude: -81.2001114)
         let cbIILocNode = LocationAnnotationNode(location: cbIILocation, image: image!)
         cbIILocNode.tag = "Classroom Building II"
         cbIILocNode.scale = SCNVector3(50,50,50)
+        cbIILocNode.scaleRelativeToDistance = true
+        
+//        let psychLocation = CLLocation(latitude: 28.6046554, longitude: -81.1995065)
+//        let psychLocNode = LocationAnnotationNode(location: psychLocation, image: image!)
+//        cbIILocNode.tag = "Psychology"
+//        cbIILocNode.scale = SCNVector3(50,50,50)
 //        cbIILocNode.scaleRelativeToDistance = true
         
-        locationNodeArray = [engILocNode, cbIILocNode]
+        locationNodeArray = [cbIILocNode]
     }
     
     private func addLocationNodesToAR() {
