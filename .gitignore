@@ -38,6 +38,9 @@ playground.xcworkspace
 # Package.pins
 .build/
 
+# BitcoinAverage.com API Key
+BitcoinAverageAPIKey.swift
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		9E92C148233B232300E1881A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E92C146233B232300E1881A /* Main.storyboard */; };
 		9E92C14A233B232300E1881A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E92C149233B232300E1881A /* Assets.xcassets */; };
 		9E92C14D233B232300E1881A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E92C14B233B232300E1881A /* LaunchScreen.storyboard */; };
+		9E92C155233B2AD200E1881A /* BitcoinAverageAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92C154233B2AD200E1881A /* BitcoinAverageAPIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9E92C149233B232300E1881A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E92C14C233B232300E1881A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E92C14E233B232300E1881A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E92C154233B2AD200E1881A /* BitcoinAverageAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAverageAPIKey.swift; sourceTree = "<group>"; };
 		B978F2AC15614F73C4B1CBCE /* Pods_CryptoPriceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoPriceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,7 +56,6 @@
 				1F9C9FD36F0133B48E832FC2 /* Pods-CryptoPriceTracker.debug.xcconfig */,
 				4824D9E431DD0D12A033AE3F /* Pods-CryptoPriceTracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +86,7 @@
 				9E92C149233B232300E1881A /* Assets.xcassets */,
 				9E92C14B233B232300E1881A /* LaunchScreen.storyboard */,
 				9E92C14E233B232300E1881A /* Info.plist */,
+				9E92C154233B2AD200E1881A /* BitcoinAverageAPIKey.swift */,
 			);
 			path = CryptoPriceTracker;
 			sourceTree = "<group>";
@@ -206,6 +208,7 @@
 			files = (
 				9E92C145233B232300E1881A /* ViewController.swift in Sources */,
 				9E92C143233B232300E1881A /* AppDelegate.swift in Sources */,
+				9E92C155233B2AD200E1881A /* BitcoinAverageAPIKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
