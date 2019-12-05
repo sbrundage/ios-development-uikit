@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		68715DC45FCF4BFF65861EC1 /* Pods_CryptoPriceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B978F2AC15614F73C4B1CBCE /* Pods_CryptoPriceTracker.framework */; };
+		9E45E22F2348D5FC000814D4 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E45E22E2348D5FC000814D4 /* APIKey.swift */; };
 		9E92C143233B232300E1881A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92C142233B232300E1881A /* AppDelegate.swift */; };
 		9E92C145233B232300E1881A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92C144233B232300E1881A /* ViewController.swift */; };
 		9E92C148233B232300E1881A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E92C146233B232300E1881A /* Main.storyboard */; };
 		9E92C14A233B232300E1881A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E92C149233B232300E1881A /* Assets.xcassets */; };
 		9E92C14D233B232300E1881A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E92C14B233B232300E1881A /* LaunchScreen.storyboard */; };
-		9E92C155233B2AD200E1881A /* BitcoinAverageAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92C154233B2AD200E1881A /* BitcoinAverageAPIKey.swift */; };
+		9E92C157233B2BAA00E1881A /* AFNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92C156233B2BAA00E1881A /* AFNetwork.swift */; };
+		9E92C159233B2E5900E1881A /* CryptoDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92C158233B2E5900E1881A /* CryptoDataModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F9C9FD36F0133B48E832FC2 /* Pods-CryptoPriceTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoPriceTracker.debug.xcconfig"; path = "Target Support Files/Pods-CryptoPriceTracker/Pods-CryptoPriceTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		4824D9E431DD0D12A033AE3F /* Pods-CryptoPriceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoPriceTracker.release.xcconfig"; path = "Target Support Files/Pods-CryptoPriceTracker/Pods-CryptoPriceTracker.release.xcconfig"; sourceTree = "<group>"; };
+		9E45E22E2348D5FC000814D4 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		9E92C13F233B232300E1881A /* CryptoPriceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPriceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E92C142233B232300E1881A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E92C144233B232300E1881A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +29,8 @@
 		9E92C149233B232300E1881A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E92C14C233B232300E1881A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E92C14E233B232300E1881A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E92C154233B2AD200E1881A /* BitcoinAverageAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAverageAPIKey.swift; sourceTree = "<group>"; };
+		9E92C156233B2BAA00E1881A /* AFNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetwork.swift; sourceTree = "<group>"; };
+		9E92C158233B2E5900E1881A /* CryptoDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDataModels.swift; sourceTree = "<group>"; };
 		B978F2AC15614F73C4B1CBCE /* Pods_CryptoPriceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoPriceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,11 +86,13 @@
 			children = (
 				9E92C142233B232300E1881A /* AppDelegate.swift */,
 				9E92C144233B232300E1881A /* ViewController.swift */,
+				9E92C156233B2BAA00E1881A /* AFNetwork.swift */,
+				9E45E22E2348D5FC000814D4 /* APIKey.swift */,
+				9E92C158233B2E5900E1881A /* CryptoDataModels.swift */,
 				9E92C146233B232300E1881A /* Main.storyboard */,
 				9E92C149233B232300E1881A /* Assets.xcassets */,
 				9E92C14B233B232300E1881A /* LaunchScreen.storyboard */,
 				9E92C14E233B232300E1881A /* Info.plist */,
-				9E92C154233B2AD200E1881A /* BitcoinAverageAPIKey.swift */,
 			);
 			path = CryptoPriceTracker;
 			sourceTree = "<group>";
@@ -206,9 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E92C159233B2E5900E1881A /* CryptoDataModels.swift in Sources */,
 				9E92C145233B232300E1881A /* ViewController.swift in Sources */,
 				9E92C143233B232300E1881A /* AppDelegate.swift in Sources */,
-				9E92C155233B2AD200E1881A /* BitcoinAverageAPIKey.swift in Sources */,
+				9E92C157233B2BAA00E1881A /* AFNetwork.swift in Sources */,
+				9E45E22F2348D5FC000814D4 /* APIKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

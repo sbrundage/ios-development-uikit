@@ -17,6 +17,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         
         setupUIPicker()
+        
+        let network = AFNetwork()
+        network.getBitcoinAverageMetadata()
     }
     
     private func setupUIPicker() {
