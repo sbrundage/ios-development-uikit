@@ -146,8 +146,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Workin' Hard!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnC-PW-2IZ">
-                                <rect key="frame" x="103" y="366" width="208.5" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Workin' Hard!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnC-PW-2IZ">
+                                <rect key="frame" x="50" y="366" width="314" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -181,9 +181,11 @@
                             <constraint firstItem="fnC-PW-2IZ" firstAttribute="centerX" secondItem="bk2-bE-bHq" secondAttribute="centerX" id="D76-J1-ZlK"/>
                             <constraint firstItem="UIv-KJ-27N" firstAttribute="leading" secondItem="WF2-Qu-eCJ" secondAttribute="leadingMargin" constant="15" id="Dfd-Pt-mda"/>
                             <constraint firstAttribute="trailing" secondItem="v1e-W4-VNr" secondAttribute="trailing" id="ENM-hl-nqc"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="fnC-PW-2IZ" secondAttribute="trailing" constant="30" id="PMX-Q1-Un4"/>
                             <constraint firstItem="bk2-bE-bHq" firstAttribute="top" secondItem="G3u-zn-jw5" secondAttribute="bottom" constant="15" id="Qx2-Ua-PsB"/>
                             <constraint firstItem="G3u-zn-jw5" firstAttribute="centerX" secondItem="v1e-W4-VNr" secondAttribute="centerX" id="Vh6-I8-2rF"/>
                             <constraint firstItem="fnC-PW-2IZ" firstAttribute="top" secondItem="bk2-bE-bHq" secondAttribute="bottom" constant="15" id="Wrt-CP-65B"/>
+                            <constraint firstItem="fnC-PW-2IZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="WF2-Qu-eCJ" secondAttribute="leadingMargin" constant="30" id="XFu-EL-6DU"/>
                             <constraint firstItem="v1e-W4-VNr" firstAttribute="top" secondItem="WF2-Qu-eCJ" secondAttribute="top" id="aaB-fY-bMg"/>
                             <constraint firstItem="jR9-7X-YNq" firstAttribute="top" secondItem="UIv-KJ-27N" secondAttribute="bottom" constant="5" id="bbl-Co-rSy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UIv-KJ-27N" secondAttribute="trailing" constant="15" id="f3T-CA-hgX"/>
@@ -191,8 +193,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adviceLabel" destination="fnC-PW-2IZ" id="Wq5-FL-eGs"/>
                         <outlet property="bmiLabel" destination="bk2-bE-bHq" id="G3j-n3-YGc"/>
-                        <outlet property="feedbackLabel" destination="fnC-PW-2IZ" id="Wq5-FL-eGs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ln-ch-Afi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
