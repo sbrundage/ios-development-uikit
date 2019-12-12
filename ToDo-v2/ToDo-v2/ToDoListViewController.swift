@@ -11,10 +11,16 @@ import UIKit
 class ToDoListViewController: UITableViewController {
     
     var itemsArray = ["Learn More Swift!", "Call Mom", "XMas Gifts"]
+    
+    let toDoListKey = "ToDoListArray"
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        if let items = defaults.array(forKey: toDoListKey) as? [String] {
+            itemsArray = items
+        }
     }
 
     // MARK: - TableView Datasouce Methods
@@ -51,6 +57,8 @@ class ToDoListViewController: UITableViewController {
 
             if let newToDo = alert.textFields?.first?.text {
                 self.itemsArray.append(newToDo)
+                
+                self.defaults.set(self.itemsArray, forKey: self.toDoListKey)
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
