@@ -29,7 +29,14 @@
                             <outlet property="delegate" destination="vw6-aJ-8dy" id="0VD-aL-wZE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Steve's To Do App v2" id="xhu-hR-S70"/>
+                    <navigationItem key="navigationItem" title="Steve's To Do App v2" id="xhu-hR-S70">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="txo-7c-Lzk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="vw6-aJ-8dy" id="kRY-Dj-IwZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAd-QM-XY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
