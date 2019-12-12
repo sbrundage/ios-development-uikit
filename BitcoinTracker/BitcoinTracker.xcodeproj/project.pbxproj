@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		9E14E65423A1A37E004CB3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E14E65323A1A37E004CB3EA /* Main.storyboard */; };
 		9E14E65623A1A3CB004CB3EA /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14E65523A1A3CB004CB3EA /* CoinManager.swift */; };
+		9E14E65B23A1BB52004CB3EA /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E14E65A23A1BB52004CB3EA /* CoinData.swift */; };
 		9EC4FEF723A1A288001D9AAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4FEF623A1A288001D9AAA /* AppDelegate.swift */; };
 		9EC4FEF923A1A288001D9AAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4FEF823A1A288001D9AAA /* SceneDelegate.swift */; };
-		9EC4FEFB23A1A288001D9AAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4FEFA23A1A288001D9AAA /* ViewController.swift */; };
+		9EC4FEFB23A1A288001D9AAA /* BitcoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4FEFA23A1A288001D9AAA /* BitcoinViewController.swift */; };
 		9EC4FF0023A1A289001D9AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EC4FEFF23A1A289001D9AAA /* Assets.xcassets */; };
 		9EC4FF0323A1A289001D9AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC4FF0123A1A289001D9AAA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,10 +20,11 @@
 /* Begin PBXFileReference section */
 		9E14E65323A1A37E004CB3EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9E14E65523A1A3CB004CB3EA /* CoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		9E14E65A23A1BB52004CB3EA /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		9EC4FEF323A1A288001D9AAA /* BitcoinTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC4FEF623A1A288001D9AAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EC4FEF823A1A288001D9AAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9EC4FEFA23A1A288001D9AAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9EC4FEFA23A1A288001D9AAA /* BitcoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinViewController.swift; sourceTree = "<group>"; };
 		9EC4FEFF23A1A289001D9AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EC4FF0223A1A289001D9AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EC4FF0423A1A289001D9AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				9E14E65523A1A3CB004CB3EA /* CoinManager.swift */,
+				9E14E65A23A1BB52004CB3EA /* CoinData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -50,7 +53,7 @@
 		9E14E65823A1A3D8004CB3EA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9EC4FEFA23A1A288001D9AAA /* ViewController.swift */,
+				9EC4FEFA23A1A288001D9AAA /* BitcoinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,7 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E14E65623A1A3CB004CB3EA /* CoinManager.swift in Sources */,
-				9EC4FEFB23A1A288001D9AAA /* ViewController.swift in Sources */,
+				9EC4FEFB23A1A288001D9AAA /* BitcoinViewController.swift in Sources */,
+				9E14E65B23A1BB52004CB3EA /* CoinData.swift in Sources */,
 				9EC4FEF723A1A288001D9AAA /* AppDelegate.swift in Sources */,
 				9EC4FEF923A1A288001D9AAA /* SceneDelegate.swift in Sources */,
 			);

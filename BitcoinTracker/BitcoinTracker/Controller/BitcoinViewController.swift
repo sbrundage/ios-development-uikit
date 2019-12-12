@@ -1,5 +1,7 @@
 //
 //  ViewController.swift
+//
+//  BitcoinViewController.swift
 //  BitcoinTracker
 //
 //  Created by Stephen Brundage on 12/11/19.
@@ -8,14 +10,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class BitcoinViewController: UIViewController, UIPickerViewDataSource {
     
     
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
-    let coinManager = CoinManager()
+    var coinManager = CoinManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
+        coinManager.delegate = self
     }
-    
+}
+
+extension BitcoinViewController: UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -41,8 +46,20 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         DispatchQueue.main.async {
             let currency = self.coinManager.currencyArray[row]
             
-            self.currencyLabel.text = currency
             self.coinManager.getCoinPrice(for: currency)
         }
+    }
+}
+
+extension BitcoinViewController: CoinManagerDelegate {
+    func didUpdatePrice(_ price: String, _ currency: String) {
+        DispatchQueue.main.async {
+            self.bitcoinLabel.text = price
+            self.currencyLabel.text = currency
+        }
+    }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
     }
 }
