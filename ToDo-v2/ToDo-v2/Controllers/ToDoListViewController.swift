@@ -10,29 +10,16 @@ import UIKit
 
 class ToDoListViewController: UITableViewController {
     
-    var itemsArray: [ToDoItem] = []
+    var itemsArray = [ToDoItem]()
     
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     let toDoListKey = "ToDoListArray"
-    let defaults = UserDefaults.standard
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let newItem = ToDoItem()
-        newItem.title = "Learn More Swift!"
-        itemsArray.append(newItem)
         
-        let newItem2 = ToDoItem()
-        newItem2.title = "Call Mom"
-        itemsArray.append(newItem2)
-        
-        let newItem3 = ToDoItem()
-        newItem3.title = "Buy Xmas Gifts"
-        itemsArray.append(newItem3)
-        
-//        if let items = defaults.array(forKey: toDoListKey) as? [String] {
-//            itemsArray = items
-//        }
+        loadItems()
     }
 
     // MARK: - TableView Datasouce Methods
@@ -42,12 +29,12 @@ class ToDoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
-        
         let item = itemsArray[indexPath.row]
         
         cell.textLabel?.text = item.title
-        
         cell.accessoryType = item.done == true ? .checkmark : .none
+        
+        saveItems()
         
         return cell
     }
@@ -76,11 +63,7 @@ class ToDoListViewController: UITableViewController {
             
             self.itemsArray.append(newToDo)
             
-            self.defaults.set(self.itemsArray, forKey: self.toDoListKey)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.saveItems()
         }
         
         alert.addTextField { (alertTextField) in
@@ -90,6 +73,32 @@ class ToDoListViewController: UITableViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func saveItems() {
+        let encoder = PropertyListEncoder()
+        
+        do {
+            let data = try encoder.encode(itemsArray)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding items array: \(error)")
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func loadItems() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                itemsArray = try decoder.decode([ToDoItem].self, from: data)
+            } catch {
+                print("Error during decoding: \(error)")
+            }
+        }
     }
 }
 
