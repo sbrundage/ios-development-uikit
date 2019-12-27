@@ -9,9 +9,13 @@
 import UIKit
 import RealmSwift
 
-class ToDoListViewController: UITableViewController {
+class ToDoListViewController: SwipeTableViewController {
+    
+    @IBOutlet weak var categoryNavigationItem: UINavigationItem!
+    
     
     var todoItems: Results<ToDoItem>?
+    
     let realm = try! Realm()
     
     var selectedCategory: Category? {
@@ -25,7 +29,7 @@ class ToDoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        
+        categoryNavigationItem.title = selectedCategory!.name + " To Do"
     }
 
     // MARK: - TableView Datasouce Methods
@@ -34,7 +38,7 @@ class ToDoListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let item = todoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done == true ? .checkmark : .none
@@ -59,9 +63,7 @@ class ToDoListViewController: UITableViewController {
             }
         }
         
-        DispatchQueue.main.async {
-            tableView.reloadData()
-        }
+        reloadTableView()
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -87,9 +89,7 @@ class ToDoListViewController: UITableViewController {
                     print("Error saving ToDoItem to Realm: \(error)")
                 }
             }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.reloadTableView()
         }
         
         alert.addTextField { (alertTextField) in
@@ -103,8 +103,28 @@ class ToDoListViewController: UITableViewController {
     
     func loadItems() {
 
-        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
+        // Load items by alpha order
+//        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
+        
+        // Load items by date created
+        todoItems = selectedCategory?.items.sorted(byKeyPath: "dateCreated", ascending: true)
 
+        reloadTableView()
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let itemForDeletion = self.todoItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(itemForDeletion)
+                }
+            } catch {
+                print("Error deleting to do item: \(error)")
+            }
+        }
+    }
+    
+    private func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
