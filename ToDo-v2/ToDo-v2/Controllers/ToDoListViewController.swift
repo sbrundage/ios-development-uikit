@@ -8,11 +8,12 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class ToDoListViewController: SwipeTableViewController {
     
-    @IBOutlet weak var categoryNavigationItem: UINavigationItem!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var itemTitle: UINavigationItem!
     
     var todoItems: Results<ToDoItem>?
     
@@ -28,8 +29,24 @@ class ToDoListViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        categoryNavigationItem.title = selectedCategory!.name + " To Do"
+        
+        tableView.separatorStyle = .none
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let colorHex = selectedCategory?.colorString {
+            
+            itemTitle.title = selectedCategory!.name + " To Do"
+            
+            guard let navBar = navigationController?.navigationBar else { fatalError("Navigation controller doesn't exist") }
+            
+            if let navBarColor = UIColor(hexString: colorHex) {
+                navBar.barTintColor = navBarColor
+                navBar.tintColor = ContrastColorOf(navBarColor, returnFlat: true)
+                navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
+                searchBar.barTintColor = navBarColor
+            }
+        }
     }
 
     // MARK: - TableView Datasouce Methods
@@ -40,8 +57,16 @@ class ToDoListViewController: SwipeTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let item = todoItems?[indexPath.row] {
+            
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done == true ? .checkmark : .none
+
+            if let color =  UIColor(hexString: selectedCategory!.colorString)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(todoItems!.count)) {
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+            }
+            
+            
         } else {
             cell.textLabel?.text = "No Items Added"
         }
@@ -78,12 +103,17 @@ class ToDoListViewController: SwipeTableViewController {
             if let currentCategory = self.selectedCategory {
                 do {
                     try self.realm.write {
-                        let newToDo = ToDoItem()
-                        newToDo.title = alert.textFields?.first?.text ?? ""
-                        newToDo.dateCreated = Date()
-                        currentCategory.items.append(newToDo)
-                        
-                        self.realm.add(newToDo)
+                        if let toDoItemName = alert.textFields?.first?.text {
+                            if toDoItemName != "" {
+                                let newToDo = ToDoItem()
+                                newToDo.title = toDoItemName
+                                newToDo.dateCreated = Date()
+                                
+                                currentCategory.items.append(newToDo)
+                                
+                                self.realm.add(newToDo)
+                            }
+                        }
                     }
                 } catch {
                     print("Error saving ToDoItem to Realm: \(error)")

@@ -100,8 +100,8 @@
 		9E14E67F23A3CE07004CB3EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E14E66C23A276E9004CB3EA /* ToDoListViewController.swift */,
 				9E7A0CCD23B64A65003DC0F2 /* SwipeTableViewController.swift */,
+				9E14E66C23A276E9004CB3EA /* ToDoListViewController.swift */,
 				9E8BAE9F23A5757D00B4598D /* CategoryViewController.swift */,
 			);
 			path = Controllers;
@@ -404,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J7U54B96T9;
 				INFOPLIST_FILE = "ToDo-v2/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J7U54B96T9;
 				INFOPLIST_FILE = "ToDo-v2/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

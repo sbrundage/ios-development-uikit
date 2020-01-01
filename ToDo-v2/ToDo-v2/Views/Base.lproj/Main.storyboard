@@ -78,14 +78,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="To Do Items" id="xhu-hR-S70">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="txo-7c-Lzk">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="vw6-aJ-8dy" id="kRY-Dj-IwZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="categoryNavigationItem" destination="xhu-hR-S70" id="Nif-qr-Sm4"/>
+                        <outlet property="itemTitle" destination="xhu-hR-S70" id="y2D-uJ-WHv"/>
+                        <outlet property="searchBar" destination="RkG-GS-NV6" id="2e3-7a-znT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAd-QM-XY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
