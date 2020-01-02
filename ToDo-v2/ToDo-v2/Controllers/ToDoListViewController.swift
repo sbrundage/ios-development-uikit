@@ -16,6 +16,7 @@ class ToDoListViewController: SwipeTableViewController {
     @IBOutlet weak var itemTitle: UINavigationItem!
     
     var todoItems: Results<ToDoItem>?
+    var longPress = UILongPressGestureRecognizer()
     
     let realm = try! Realm()
     
@@ -31,6 +32,9 @@ class ToDoListViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         tableView.separatorStyle = .none
+        
+        longPress = UILongPressGestureRecognizer(target: self, action: #selector(ToDoListViewController.handleLongPress))
+        tableView.addGestureRecognizer(longPress)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,6 +113,11 @@ class ToDoListViewController: SwipeTableViewController {
                                 newToDo.title = toDoItemName
                                 newToDo.dateCreated = Date()
                                 
+                                // Grab second text field input
+                                if let itemInfo = alert.textFields?[1].text {
+                                    newToDo.info = itemInfo
+                                }
+                                
                                 currentCategory.items.append(newToDo)
                                 
                                 self.realm.add(newToDo)
@@ -123,7 +132,11 @@ class ToDoListViewController: SwipeTableViewController {
         }
         
         alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Create new item"
+            alertTextField.placeholder = "To Do Item Title"
+        }
+                
+        alert.addTextField { (alertTextFeld) in
+            alertTextFeld.placeholder = "Additional Info"
         }
         
         alert.addAction(action)
@@ -157,6 +170,33 @@ class ToDoListViewController: SwipeTableViewController {
     private func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+    
+    private func infoPopUp(infoString: String, completionHandler: @escaping () -> Void) {
+        let alert = UIAlertController(title: "More Info", message: infoString, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            completionHandler() // This will only get called after okay is tapped in the alert
+        }
+
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func handleLongPress(sender: UILongPressGestureRecognizer) {
+        if longPress.state == UIGestureRecognizer.State.began {
+            let touchPoint = longPress.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+                if let itemInfo = todoItems?[indexPath.row].info {
+                    if itemInfo != "" {
+                        infoPopUp(infoString: itemInfo) {
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
         }
     }
 }

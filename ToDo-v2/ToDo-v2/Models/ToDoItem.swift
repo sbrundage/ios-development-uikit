@@ -13,5 +13,6 @@ class ToDoItem: Object {
     @objc dynamic var title = ""
     @objc dynamic var done = false
     @objc dynamic var dateCreated: Date?
+    @objc dynamic var info: String?
     var parentCategory = LinkingObjects(fromType: Category.self, property: "items")
 }
