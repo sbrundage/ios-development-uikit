@@ -13,6 +13,7 @@ struct CalculatorLogic {
     private var number: Double?
     
     private var intermediateCalculation: (n1: Double, calcMethod: String)?
+    private var intermediateCalculations: (numbers: [Double], calcMethod: String)?
     
     mutating func setNumber(_ number: Double) {
         self.number = number
@@ -53,6 +54,10 @@ struct CalculatorLogic {
             }
         } else { return nil }
     }
+    
+//    private func performMultipleNumberCalculations(numbers: [Double]) -> Double? {
+//        
+//    }
     
     func isInt(_ value: Double) -> Bool {
         let isInt = floor(value) == value
