@@ -31,10 +31,26 @@ class RemoteCarViewController: UIViewController, ARSCNViewDelegate {
         // Set Sceneview Delegate
         sceneView.delegate = self
         
-        // Create scene
-        let scene = SCNScene()
+        // Create car scene
+        let carScene = SCNScene(named: "car.dae")!
         
-        sceneView.scene = scene
+        // Create car node
+        let carNode = carScene.rootNode.childNode(withName: "car", recursively: true)!
+        carNode.position = SCNVector3(0, -0.5, -0.5)
+        
+        // Add car node to scene
+        sceneView.scene.rootNode.addChildNode(carNode)
+        sceneView.scene = carScene
+    }
+    
+    private func setupControlPad() {
+        let leftButton = UIButton(frame: CGRect(x: 0, y: self.sceneView.frame.height - 40, width: 50, height: 50))
+        leftButton.setTitle("Left", for: .normal)
+        self.sceneView.addSubview(leftButton)
+        
+        let rightButton = UIButton(frame: CGRect(x: 50, y: self.sceneView.frame.height - 40, width: 50, height: 50))
+        rightButton.setTitle("Right", for: .normal)
+        self.sceneView.addSubview(rightButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
