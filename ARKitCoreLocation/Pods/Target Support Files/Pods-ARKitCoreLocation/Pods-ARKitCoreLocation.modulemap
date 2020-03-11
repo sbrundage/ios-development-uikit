@@ -1,0 +1,6 @@
+framework module Pods_ARKitCoreLocation {
+  umbrella header "Pods-ARKitCoreLocation-umbrella.h"
+
+  export *
+  module * { export * }
+}
