@@ -10,7 +10,7 @@ import UIKit
 
 class DestinationsTableViewController: UITableViewController {
     
-    private var destinations = ["Coffee Shops", "Food", "Gas Stations", "Hospitals", "Bars", "Gyms"]
+    private var destinations = ["Coffee Shops", "Food", "Gas Stations", "Hospitals", "Bars", "Gyms", "Grocery"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

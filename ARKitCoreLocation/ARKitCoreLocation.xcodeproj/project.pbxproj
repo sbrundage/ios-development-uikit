@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E160D0E241924BC00B341CF /* pin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E160D0D241924BB00B341CF /* pin2.png */; };
+		9E160D102419257D00B341CF /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E160D0F2419257D00B341CF /* PlaceAnnotation.swift */; };
 		9E5D873724191FCF00AD1705 /* pin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D873624191FCF00AD1705 /* pin.jpg */; };
 		9EB0BB242415655D003693A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0BB232415655D003693A4 /* AppDelegate.swift */; };
 		9EB0BB262415655D003693A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0BB252415655D003693A4 /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		5FE565F43CC310C378C22C1C /* Pods_ARKitCoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitCoreLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1DB31A5009F6CE1C95880A /* Pods-ARKitCoreLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitCoreLocation.release.xcconfig"; path = "Target Support Files/Pods-ARKitCoreLocation/Pods-ARKitCoreLocation.release.xcconfig"; sourceTree = "<group>"; };
+		9E160D0D241924BB00B341CF /* pin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin2.png; sourceTree = "<group>"; };
+		9E160D0F2419257D00B341CF /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		9E5D873624191FCF00AD1705 /* pin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pin.jpg; sourceTree = "<group>"; };
 		9EB0BB202415655D003693A4 /* ARKitCoreLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitCoreLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB0BB232415655D003693A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,11 +84,13 @@
 				9EB0BB252415655D003693A4 /* SceneDelegate.swift */,
 				9EB0BB272415655D003693A4 /* ARViewController.swift */,
 				9EB0BB3724156962003693A4 /* DestinationsTableViewController.swift */,
+				9E160D0F2419257D00B341CF /* PlaceAnnotation.swift */,
 				9EB0BB292415655D003693A4 /* Main.storyboard */,
 				9EB0BB2E2415655F003693A4 /* LaunchScreen.storyboard */,
 				9EB0BB2C2415655F003693A4 /* Assets.xcassets */,
 				9EB0BB312415655F003693A4 /* Info.plist */,
 				9E5D873624191FCF00AD1705 /* pin.jpg */,
+				9E160D0D241924BB00B341CF /* pin2.png */,
 			);
 			path = ARKitCoreLocation;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EB0BB302415655F003693A4 /* LaunchScreen.storyboard in Resources */,
+				9E160D0E241924BC00B341CF /* pin2.png in Resources */,
 				9E5D873724191FCF00AD1705 /* pin.jpg in Resources */,
 				9EB0BB2D2415655F003693A4 /* Assets.xcassets in Resources */,
 				9EB0BB2B2415655D003693A4 /* Main.storyboard in Resources */,
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E160D102419257D00B341CF /* PlaceAnnotation.swift in Sources */,
 				9EB0BB282415655D003693A4 /* ARViewController.swift in Sources */,
 				9EB0BB242415655D003693A4 /* AppDelegate.swift in Sources */,
 				9EB0BB3824156962003693A4 /* DestinationsTableViewController.swift in Sources */,

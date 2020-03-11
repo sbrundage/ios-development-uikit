@@ -72,20 +72,26 @@ class ARViewController: UIViewController {
             
             for item in response.mapItems {
                 if let placeLocation = item.placemark.location {
-                    self.createAnnotationNode(for: placeLocation)
+                    self.createAnnotationNode(for: placeLocation, name: item.placemark.name!)
                 }
             }
         }
     }
     
-    private func createAnnotationNode(for location: CLLocation) {
+    private func createAnnotationNode(for location: CLLocation, name: String) {
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let location = CLLocation(coordinate: coordinate, altitude: 300)
+        let location = CLLocation(coordinate: coordinate, altitude: 200)
         
-        let pin = UIImage(named: "pin")!
-        let annotationNode = LocationAnnotationNode(location: location, image: pin)
+        let placeAnnotation = PlaceAnnotation(location: location, title: name)
+        placeAnnotation.scaleRelativeToDistance = false
         
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+//        let pin = UIImage(named: "pin")!
+//        let annotationNode = LocationAnnotationNode(location: location, image: pin)
+//        annotationNode.scaleRelativeToDistance = false
+        
+        DispatchQueue.main.async {
+            self.sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: placeAnnotation)
+        }
     }
 }
 
