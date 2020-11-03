@@ -26,6 +26,9 @@
 		9E7B966824BC838F006EFD65 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B966724BC838F006EFD65 /* NewPostViewController.swift */; };
 		9E7B966A24BC8397006EFD65 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B966924BC8397006EFD65 /* ProfileViewController.swift */; };
 		9E7B966C24BC83A0006EFD65 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B966B24BC83A0006EFD65 /* ActivityViewController.swift */; };
+		9E87ED1D24C2592B0087A398 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87ED1C24C2592B0087A398 /* ExploreCollectionViewCell.swift */; };
+		9E87ED1F24C25AE30087A398 /* SearchBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87ED1E24C25AE30087A398 /* SearchBarContainerView.swift */; };
+		9E8E889F2550F66F00C4F418 /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E889E2550F66F00C4F418 /* CollectionLayout.swift */; };
 		9EA1BFBB24C21D5D003DBE22 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1BFBA24C21D5D003DBE22 /* FeedModel.swift */; };
 		9EA1BFBD24C21DDE003DBE22 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1BFBC24C21DDE003DBE22 /* ActivityModel.swift */; };
 		9EA1BFC224C221DC003DBE22 /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1BFC024C221DC003DBE22 /* StoriesTableViewCell.swift */; };
@@ -70,6 +73,9 @@
 		9E7B966724BC838F006EFD65 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		9E7B966924BC8397006EFD65 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9E7B966B24BC83A0006EFD65 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		9E87ED1C24C2592B0087A398 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E87ED1E24C25AE30087A398 /* SearchBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerView.swift; sourceTree = "<group>"; };
+		9E8E889E2550F66F00C4F418 /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
 		9EA1BFBA24C21D5D003DBE22 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		9EA1BFBC24C21DDE003DBE22 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		9EA1BFC024C221DC003DBE22 /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 		9E7B962724BC8053006EFD65 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				9E8E889E2550F66F00C4F418 /* CollectionLayout.swift */,
 				9E7B964A24BC8072006EFD65 /* Models */,
 				9E7B964B24BC807B006EFD65 /* Views */,
 				9EA1BFB324C21CAE003DBE22 /* ViewModels */,
@@ -161,6 +168,8 @@
 				9EA1BFC924C22B3F003DBE22 /* StoryCollectionViewCell.xib */,
 				9EA1BFCC24C22D45003DBE22 /* FeedTableViewCell.swift */,
 				9EA1BFCD24C22D45003DBE22 /* FeedTableViewCell.xib */,
+				9E87ED1C24C2592B0087A398 /* ExploreCollectionViewCell.swift */,
+				9E87ED1E24C25AE30087A398 /* SearchBarContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +330,7 @@
 				9E7B966624BC8385006EFD65 /* SearchViewController.swift in Sources */,
 				9E7B965224BC80F0006EFD65 /* SimpleCamera.swift in Sources */,
 				9E7B965324BC80F0006EFD65 /* SimpleCameraProtocol.swift in Sources */,
+				9E87ED1F24C25AE30087A398 /* SearchBarContainerView.swift in Sources */,
 				9E7B966824BC838F006EFD65 /* NewPostViewController.swift in Sources */,
 				9EA1BFBB24C21D5D003DBE22 /* FeedModel.swift in Sources */,
 				9E7B965724BC815A006EFD65 /* UserModel.swift in Sources */,
@@ -328,6 +338,8 @@
 				9E7B966424BC835C006EFD65 /* HomeViewController.swift in Sources */,
 				9EA1BFCA24C22B3F003DBE22 /* StoryCollectionViewCell.swift in Sources */,
 				9E7B962B24BC8053006EFD65 /* SceneDelegate.swift in Sources */,
+				9E8E889F2550F66F00C4F418 /* CollectionLayout.swift in Sources */,
+				9E87ED1D24C2592B0087A398 /* ExploreCollectionViewCell.swift in Sources */,
 				9EA1BFBD24C21DDE003DBE22 /* ActivityModel.swift in Sources */,
 				9E7B966C24BC83A0006EFD65 /* ActivityViewController.swift in Sources */,
 				9EA1BFC224C221DC003DBE22 /* StoriesTableViewCell.swift in Sources */,

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LxG-KT-CO5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LxG-KT-CO5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,9 +17,49 @@
                     <view key="view" contentMode="scaleToFill" id="nhd-KH-nVU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zfy-ok-Vi6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="qPD-O2-BHf" customClass="CollectionLayout" customModule="InstagramClone" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreCollectionViewCell" id="MhQ-wq-uVG" customClass="ExploreCollectionViewCell" customModule="InstagramClone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iyf-CC-4fB">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LaT-lc-gqi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="LaT-lc-gqi" secondAttribute="trailing" id="6YN-pc-I6c"/>
+                                                <constraint firstAttribute="bottom" secondItem="LaT-lc-gqi" secondAttribute="bottom" id="Kx3-an-fHZ"/>
+                                                <constraint firstItem="LaT-lc-gqi" firstAttribute="top" secondItem="Iyf-CC-4fB" secondAttribute="top" id="ehO-bO-Huz"/>
+                                                <constraint firstItem="LaT-lc-gqi" firstAttribute="leading" secondItem="Iyf-CC-4fB" secondAttribute="leading" id="t10-k6-had"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="exploreImage" destination="LaT-lc-gqi" id="SvK-TC-q4m"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lPw-Wp-KHj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lPw-Wp-KHj" firstAttribute="bottom" secondItem="Zfy-ok-Vi6" secondAttribute="bottom" id="PLz-TE-DpM"/>
+                            <constraint firstItem="Zfy-ok-Vi6" firstAttribute="top" secondItem="lPw-Wp-KHj" secondAttribute="top" id="PMQ-zx-7ds"/>
+                            <constraint firstItem="lPw-Wp-KHj" firstAttribute="trailing" secondItem="Zfy-ok-Vi6" secondAttribute="trailing" id="bPP-jq-B2x"/>
+                            <constraint firstItem="Zfy-ok-Vi6" firstAttribute="leading" secondItem="lPw-Wp-KHj" secondAttribute="leading" id="pVT-io-X3N"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="exploreCollectionView" destination="Zfy-ok-Vi6" id="Jqu-wK-T59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDl-iR-kJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
