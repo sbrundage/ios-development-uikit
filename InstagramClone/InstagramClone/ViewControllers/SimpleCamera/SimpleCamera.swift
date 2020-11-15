@@ -8,31 +8,18 @@ import AVFoundation
 import Photos
 import UIKit
 
-/*
- AVCaptureSession.startRunning() is a blocking call which can
- take a long time. We dispatch session setup to the sessionQueue so
- that the main queue isn't blocked, which keeps the UI responsive.
- */
-
-
 class SimpleCamera: NSObject, SimpleCameraProtocol {
     
     fileprivate lazy var session: AVCaptureSession = {
-        
         return AVCaptureSession()
-        
     }()
     
     fileprivate lazy var movieOutput: AVCaptureMovieFileOutput = {
-        
         return AVCaptureMovieFileOutput()
-        
     }()
     
     fileprivate lazy var photoOutput: AVCapturePhotoOutput = {
-        
         return AVCapturePhotoOutput()
-        
     }()
     
     fileprivate var isCaptureSessionConfigured = false
@@ -64,82 +51,54 @@ class SimpleCamera: NSObject, SimpleCameraProtocol {
         get {
             
             let cameraMediaType = AVMediaType.video
-            
             let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
             
             if cameraAuthorizationStatus == .authorized {
-                
                 return true
-                
             }
             else {
-                
                 return false
-                
             }
-            
         }
-        
     }
     
     var currentCaptureMode: SimpleCameraCaptureMode = .photo
     
     private lazy var videoDeviceDiscoverySession = {
-        
         return AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera, .builtInDualCamera], mediaType: AVMediaType.video, position: .unspecified)
-        
     }()
     
     private override init() {
-        
         self.cameraView = SimpleCameraView()
-        
     }
     
     init(cameraView: SimpleCameraView) {
-        
         self.cameraView = cameraView
-        
     }
     
     init(cameraView: SimpleCameraView, videoPreset: AVCaptureSession.Preset, photoPreset: AVCaptureSession.Preset, cameraPosition: SimpleCameraPosition, captureMode: SimpleCameraCaptureMode) {
         
         self.videoSessionPreset = videoPreset
-        
         self.photoSessionPreset = photoPreset
-        
         self.cameraPosition = cameraPosition
-        
         self.currentCaptureMode = captureMode
-        
         self.cameraView = cameraView
-        
     }
     
     init(cameraView: SimpleCameraView, cameraPosition: SimpleCameraPosition, captureMode: SimpleCameraCaptureMode) {
-        
         self.cameraPosition = cameraPosition
-        
         self.currentCaptureMode = captureMode
-        
         self.cameraView = cameraView
-        
     }
     
     func getFlashSettingName(captureMode: SimpleCameraCaptureMode) -> String? {
         
         switch captureMode {
-            
         case .photo:
-            
             return flashMode.description
-            
         case .video:
-            
             return currentTorchMode()?.1
-            
         }
-        
     }
     
     func toggleCamera() {
@@ -149,25 +108,17 @@ class SimpleCamera: NSObject, SimpleCameraProtocol {
             guard let activeInput = self.activeInput else { return }
             
             let currentVideoDevice = activeInput.device
-            
             let currentPosition = currentVideoDevice.position
-            
             let preferredPosition: AVCaptureDevice.Position
-            
             let preferredDeviceType: AVCaptureDevice.DeviceType
             
             switch currentPosition {
-                
             case .unspecified, .front:
-                
                 preferredPosition = .back
-                
                 preferredDeviceType = .builtInDualCamera
                 
             case .back:
-                
                 preferredPosition = .front
-                
                 preferredDeviceType = .builtInWideAngleCamera
                 
             @unknown default:
@@ -175,9 +126,7 @@ class SimpleCamera: NSObject, SimpleCameraProtocol {
             }
             
             self.changeCameraPosition(activeInput: activeInput, preferredPosition: preferredPosition, preferredDeviceType: preferredDeviceType)
-            
         }
-        
     }
     
     func setCamera(position: SimpleCameraPosition) {

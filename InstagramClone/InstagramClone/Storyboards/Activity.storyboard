@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kyo-cU-UpG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kyo-cU-UpG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,13 +16,45 @@
                     <view key="view" contentMode="scaleToFill" id="9ug-Ka-YXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ie-wO-ALs" customClass="CustomSegmentedControl" customModule="InstagramClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qQf-Hf-Ox3"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc8-qa-f0M">
+                                <rect key="frame" x="0.0" y="112" width="414" height="784"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ing-7v-ENT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ik5-0U-BIb"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XPn-H6-rVG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XPn-H6-rVG" firstAttribute="bottom" secondItem="zc8-qa-f0M" secondAttribute="bottom" id="4My-rO-3fW"/>
+                            <constraint firstItem="1ie-wO-ALs" firstAttribute="top" secondItem="XPn-H6-rVG" secondAttribute="top" id="87B-EU-xSc"/>
+                            <constraint firstItem="zc8-qa-f0M" firstAttribute="leading" secondItem="XPn-H6-rVG" secondAttribute="leading" id="9gz-aI-shp"/>
+                            <constraint firstItem="zc8-qa-f0M" firstAttribute="top" secondItem="1ie-wO-ALs" secondAttribute="bottom" id="FFb-kT-epM"/>
+                            <constraint firstItem="XPn-H6-rVG" firstAttribute="trailing" secondItem="1ie-wO-ALs" secondAttribute="trailing" id="bno-FH-HbD"/>
+                            <constraint firstItem="XPn-H6-rVG" firstAttribute="trailing" secondItem="zc8-qa-f0M" secondAttribute="trailing" id="pnO-2D-RKl"/>
+                            <constraint firstItem="1ie-wO-ALs" firstAttribute="leading" secondItem="XPn-H6-rVG" secondAttribute="leading" id="y74-rj-8sv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="zc8-qa-f0M" id="3yE-h7-PhM"/>
+                        <outlet property="segmentedControl" destination="1ie-wO-ALs" id="MKp-93-jOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQD-Ye-rYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

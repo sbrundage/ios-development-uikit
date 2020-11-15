@@ -14,21 +14,15 @@ class SimpleCameraView: UIView {
         super.awakeFromNib()
         
         (layer as! AVCaptureVideoPreviewLayer).videoGravity = AVLayerVideoGravity.resizeAspectFill
-        
         (layer as! AVCaptureVideoPreviewLayer).masksToBounds = true
         
     }
     
     func set(session: AVCaptureSession) {
-        
         (layer as! AVCaptureVideoPreviewLayer).session = session
-        
     }
     
     override class var layerClass: AnyClass {
-        
         return AVCaptureVideoPreviewLayer.self
-        
     }
-    
 }
