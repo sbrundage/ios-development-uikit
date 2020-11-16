@@ -124,6 +124,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0980172562167F00A36415 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1BFCC24C22D45003DBE22 /* FeedTableViewCell.swift */,
+				9EA1BFCD24C22D45003DBE22 /* FeedTableViewCell.xib */,
+				9EA1BFC824C22B3F003DBE22 /* StoryCollectionViewCell.swift */,
+				9EA1BFC924C22B3F003DBE22 /* StoryCollectionViewCell.xib */,
+				9EA1BFC124C221DC003DBE22 /* StoriesTableViewCell.xib */,
+				9EA1BFC024C221DC003DBE22 /* StoriesTableViewCell.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		9E098018256216C600A36415 /* ExploreTab */ = {
+			isa = PBXGroup;
+			children = (
+				9E87ED1E24C25AE30087A398 /* SearchBarContainerView.swift */,
+				9E4768F3255A304500D0DA25 /* PhotoCollectionViewCell.swift */,
+				9E87ED1C24C2592B0087A398 /* ExploreCollectionViewCell.swift */,
+			);
+			path = ExploreTab;
+			sourceTree = "<group>";
+		};
+		9E098019256216DC00A36415 /* ActivityTab */ = {
+			isa = PBXGroup;
+			children = (
+				9E02B757255A377F00F36590 /* CustomSegmentedControl.swift */,
+				9E0980092561D94700A36415 /* ActivityTableViewCell.swift */,
+				9E09800A2561D94700A36415 /* ActivityTableViewCell.xib */,
+				9E09800F2561DB2200A36415 /* ActivityView.swift */,
+				9E0980132561DB3C00A36415 /* ActivityView.xib */,
+			);
+			path = ActivityTab;
+			sourceTree = "<group>";
+		};
 		9E7B961C24BC8053006EFD65 = {
 			isa = PBXGroup;
 			children = (
@@ -183,20 +218,9 @@
 		9E7B964B24BC807B006EFD65 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9E02B757255A377F00F36590 /* CustomSegmentedControl.swift */,
-				9EA1BFC024C221DC003DBE22 /* StoriesTableViewCell.swift */,
-				9EA1BFC124C221DC003DBE22 /* StoriesTableViewCell.xib */,
-				9EA1BFC824C22B3F003DBE22 /* StoryCollectionViewCell.swift */,
-				9EA1BFC924C22B3F003DBE22 /* StoryCollectionViewCell.xib */,
-				9EA1BFCC24C22D45003DBE22 /* FeedTableViewCell.swift */,
-				9EA1BFCD24C22D45003DBE22 /* FeedTableViewCell.xib */,
-				9E87ED1C24C2592B0087A398 /* ExploreCollectionViewCell.swift */,
-				9E87ED1E24C25AE30087A398 /* SearchBarContainerView.swift */,
-				9E4768F3255A304500D0DA25 /* PhotoCollectionViewCell.swift */,
-				9E0980092561D94700A36415 /* ActivityTableViewCell.swift */,
-				9E09800A2561D94700A36415 /* ActivityTableViewCell.xib */,
-				9E09800F2561DB2200A36415 /* ActivityView.swift */,
-				9E0980132561DB3C00A36415 /* ActivityView.xib */,
+				9E098019256216DC00A36415 /* ActivityTab */,
+				9E098018256216C600A36415 /* ExploreTab */,
+				9E0980172562167F00A36415 /* HomeTab */,
 			);
 			path = Views;
 			sourceTree = "<group>";
